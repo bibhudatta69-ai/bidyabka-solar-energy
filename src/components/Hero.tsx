@@ -84,7 +84,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-6 max-w-2xl leading-relaxed"
           >
-            Get up to <span className="font-bold text-accent">₹78,000</span> government subsidy on residential solar installation. 
+            Get up to <span className="font-bold text-accent">₹138,000</span> government subsidy on residential or domestic solar installation. 
             Save 90% on electricity bills with BSEAS – Odisha's trusted solar EPC company.
           </motion.p>
 

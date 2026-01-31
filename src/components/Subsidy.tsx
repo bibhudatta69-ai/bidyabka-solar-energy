@@ -95,8 +95,9 @@ export default function Subsidy() {
             PM Surya Ghar Muft Bijli Yojana
           </h2>
           <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto leading-relaxed">
-            Get up to <span className="font-bold text-accent">₹78,000</span> government subsidy on your rooftop solar installation. 
+            Get up to <span className="font-bold text-accent">₹138,000</span> government subsidy on your rooftop solar installation. 
             Generate free electricity for 25 years!
+            Central ₹78000 and ₹60000 for State Solar Subsidy
           </p>
         </motion.div>
 
