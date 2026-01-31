@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BSEAS Solar Energy Design System - Premium Eco-Friendly Solar Brand */
+
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Deep Eco Green Energy Theme */
+    --background: 150 20% 98%;
+    --foreground: 150 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 25% 12%;
+
+    /* Primary - Deep Solar Green */
+    --primary: 168 76% 26%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Clean Sky Teal */
+    --secondary: 175 84% 32%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent - Soft Solar Yellow */
+    --accent: 45 93% 58%;
+    --accent-foreground: 150 25% 12%;
+
+    --muted: 150 15% 95%;
+    --muted-foreground: 150 16% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 20% 90%;
+    --input: 150 20% 90%;
+    --ring: 168 76% 26%;
+
+    --radius: 0.75rem;
+
+    /* Extended Eco Palette */
+    --eco-green: 168 76% 26%;
+    --eco-green-light: 168 65% 38%;
+    --eco-green-dark: 168 80% 18%;
+    --eco-teal: 175 84% 32%;
+    --eco-teal-light: 175 70% 45%;
+    --eco-sky: 195 80% 50%;
+    --eco-yellow: 45 93% 58%;
+    --eco-yellow-soft: 48 90% 65%;
+    --eco-orange: 28 95% 55%;
+    --eco-cream: 45 40% 96%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(168 76% 26%), hsl(175 84% 32%));
+    --gradient-secondary: linear-gradient(135deg, hsl(175 84% 32%), hsl(195 80% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(168 76% 26% / 0.95), hsl(175 84% 32% / 0.85));
+    --gradient-eco: linear-gradient(135deg, hsl(168 76% 26%), hsl(168 65% 38%), hsl(175 84% 32%));
+    --gradient-sunset: linear-gradient(135deg, hsl(168 76% 26%), hsl(45 93% 58%));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.08));
+    --gradient-card: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+    --gradient-footer: linear-gradient(180deg, hsl(168 80% 18%), hsl(168 76% 12%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(168 76% 26% / 0.08);
+    --shadow-md: 0 4px 12px -1px hsl(168 76% 26% / 0.12), 0 2px 6px -2px hsl(168 76% 26% / 0.08);
+    --shadow-lg: 0 12px 24px -4px hsl(168 76% 26% / 0.15), 0 4px 10px -4px hsl(168 76% 26% / 0.1);
+    --shadow-xl: 0 24px 48px -8px hsl(168 76% 26% / 0.18), 0 10px 20px -6px hsl(168 76% 26% / 0.1);
+    --shadow-glow: 0 0 50px hsl(168 76% 26% / 0.35);
+    --shadow-glow-accent: 0 4px 20px 0 hsl(45 93% 58% / 0.4);
+    --shadow-card: 0 8px 30px -6px hsl(168 76% 26% / 0.12);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-bg-strong: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-blur: 16px;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 168 76% 26%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 168 76% 26%;
+    --sidebar-border: 150 20% 91%;
+    --sidebar-ring: 175 84% 32%;
+  }
+
+  .dark {
+    --background: 168 30% 6%;
+    --foreground: 150 40% 98%;
+
+    --card: 168 30% 10%;
+    --card-foreground: 150 40% 98%;
+
+    --popover: 168 30% 10%;
+    --popover-foreground: 150 40% 98%;
+
+    --primary: 168 76% 45%;
+    --primary-foreground: 168 30% 6%;
+
+    --secondary: 175 60% 35%;
+    --secondary-foreground: 150 40% 98%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 168 30% 6%;
+
+    --muted: 168 30% 16%;
+    --muted-foreground: 168 20% 65%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 150 40% 98%;
+
+    --border: 168 30% 18%;
+    --input: 168 30% 18%;
+    --ring: 168 76% 45%;
+
+    --sidebar-background: 168 30% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 168 76% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 168 30% 16%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 168 30% 18%;
+    --sidebar-ring: 168 76% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Enhanced Glassmorphism Cards */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .glass-card-strong {
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .glass-card-dark {
+    background: linear-gradient(135deg, hsl(168 76% 20% / 0.9), hsl(168 80% 16% / 0.95));
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Premium Eco Button Styles */
+  .btn-primary {
+    @apply px-6 py-3 rounded-2xl font-semibold;
+    @apply transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    color: white;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-2xl font-semibold;
+    @apply transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(175 70% 45%));
+    color: white;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 rounded-2xl font-semibold;
+    @apply transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(48 90% 65%));
+    color: hsl(var(--foreground));
+    box-shadow: var(--shadow-glow-accent);
+  }
+
+  .btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px 0 hsl(45 93% 58% / 0.5);
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-2xl font-semibold;
+    @apply hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  .btn-hero {
+    @apply px-8 py-4 rounded-2xl font-bold text-lg;
+    @apply transition-all duration-300 transform;
+    @apply shadow-xl;
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .btn-hero-primary {
+    @apply btn-hero;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    color: white;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-hero-secondary {
+    @apply btn-hero;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: white;
+  }
+
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-20 md:py-28 px-4 md:px-6;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed;
+  }
+
+  /* Government Badge Style */
+  .govt-badge {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full;
+    @apply font-semibold text-sm;
+    background: linear-gradient(135deg, hsl(168 76% 26% / 0.1), hsl(175 84% 32% / 0.1));
+    color: hsl(var(--primary));
+    border: 1px solid hsl(168 76% 26% / 0.2);
+  }
+
+  /* Enhanced Feature Card */
+  .feature-card {
+    @apply p-7 rounded-3xl;
+    background: var(--glass-bg-strong);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: var(--shadow-card);
+    @apply transition-all duration-400;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: hsl(168 76% 26% / 0.3);
+  }
+
+  /* Stats Card */
+  .stats-card {
+    @apply p-8 rounded-3xl text-center;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    @apply text-primary-foreground;
+  }
+
+  /* Eco Background Patterns */
+  .eco-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(168 76% 26% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(175 84% 32% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(45 93% 58% / 0.02) 0%, transparent 70%);
+  }
+
+  .eco-gradient-bg {
+    background: linear-gradient(180deg, 
+      hsl(150 20% 98%) 0%, 
+      hsl(150 18% 96%) 50%,
+      hsl(150 20% 98%) 100%
+    );
+  }
+
+  .eco-section-gradient {
+    background: linear-gradient(180deg,
+      hsl(var(--background)) 0%,
+      hsl(150 15% 95%) 100%
+    );
+  }
+
+  /* Wave Divider */
+  .wave-divider {
+    position: relative;
+  }
+
+  .wave-divider::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%230f766e' d='M0,40L60,35C120,30,240,20,360,25C480,30,600,50,720,55C840,60,960,50,1080,40C1200,30,1320,20,1380,15L1440,10L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z'/%3E%3C/svg%3E") no-repeat center bottom;
+    background-size: cover;
+  }
+
+  /* Floating Button */
+  .floating-btn {
+    @apply fixed z-50 rounded-full;
+    @apply flex items-center justify-center;
+    @apply transition-all duration-300;
+    @apply w-14 h-14 md:w-16 md:h-16;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .floating-btn:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 20px 40px -8px hsl(168 76% 26% / 0.3);
+  }
+
+  /* Animate on scroll */
+  .animate-fade-up {
+    animation: fadeUp 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Enhanced Pulse animation for CTAs */
+  .pulse-glow {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 25px hsl(168 76% 26% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 50px hsl(168 76% 26% / 0.6);
+    }
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-accent {
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(28 95% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Icon gradient container */
+  .icon-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+
+  .icon-gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(48 90% 65%));
+  }
+
+  /* Form input glow */
+  .input-glow:focus {
+    box-shadow: 0 0 0 3px hsl(168 76% 26% / 0.15);
+    border-color: hsl(var(--primary));
+  }
+
+  /* Gallery hover effect */
+  .gallery-item {
+    @apply overflow-hidden rounded-2xl;
+    @apply transition-all duration-500;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .duration-400 {
+    transition-duration: 400ms;
+  }
+}
