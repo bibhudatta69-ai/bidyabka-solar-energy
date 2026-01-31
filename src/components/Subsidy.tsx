@@ -33,7 +33,7 @@ const subsidyDetails = [
 const benefits = [
   {
     icon: IndianRupee,
-    title: "Up to ₹78,000 Subsidy",
+    title: "Up to ₹138,000 Subsidy",
     description: "Direct benefit transfer to your bank account from the Government of India",
   },
   {
