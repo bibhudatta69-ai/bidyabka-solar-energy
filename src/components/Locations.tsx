@@ -19,21 +19,9 @@ const locations = [
 const contactInfo = [
   {
     icon: Phone,
-    label: "Primary Phone",
-    value: "+91 7008404029",
-    href: "tel:+917008404029",
-  },
-  {
-    icon: Phone,
-    label: "WhatsApp",
+    label: "Phone & Whatsapp",
     value: "+91 9337784113",
-    href: "https://wa.me/919337784113",
-  },
-  {
-    icon: Phone,
-    label: "Alternate Phone",
-    value: "+91 9556355198",
-    href: "tel:+919556355198",
+    href: "tel:+919337784113",
   },
   {
     icon: Mail,

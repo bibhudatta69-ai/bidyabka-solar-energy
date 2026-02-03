@@ -59,7 +59,7 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+917008404029"
+              href="tel:+919337784113"
               className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm text-primary-foreground transition-all duration-300 hover:shadow-lg"
               style={{
                 background: 'linear-gradient(135deg, hsl(168 76% 26%), hsl(175 84% 32%))',
@@ -107,7 +107,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
-                href="tel:+917008404029"
+                href="tel:+919337784113"
                 className="mt-4 flex items-center justify-center gap-2 py-4 px-5 rounded-xl text-primary-foreground font-semibold"
                 style={{
                   background: 'linear-gradient(135deg, hsl(168 76% 26%), hsl(175 84% 32%))',

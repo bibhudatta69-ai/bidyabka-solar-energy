@@ -35,9 +35,13 @@ const formSchema = z.object({
   fullAddress: z.string().min(10, "Please enter complete address").max(500),
   city: z.string().min(2, "City is required").max(100),
   systemSize: z.enum(["1kW", "2kW", "3kW", "5kW", "10kW+"], {
-    required_error: "Please select system size",
+    required_error: "Please select kW",
   }),
   monthlyBill: z.string().max(50).optional(),
+  solarType: z.enum(
+  ["rooftop", "on-grid", "hybrid", "off-grid", "other"],
+  { required_error: "Please select solar system type" }
+),
   message: z.string().max(1000).optional(),
   sendViaWhatsapp: z.boolean().default(false),
   sendViaEmail: z.boolean().default(false),
@@ -65,6 +69,7 @@ export default function LeadForm() {
       message: "",
       sendViaWhatsapp: false,
       sendViaEmail: false,
+      solarType: "",
     },
   });
 
@@ -128,9 +133,9 @@ window.location.href = `mailto:bidyabkasolarenergy@gmail.com?subject=${subject}&
           `*WhatsApp:* ${data.whatsappNumber || data.mobileNumber}\n` +
           `*Address:* ${data.fullAddress}\n` +
           `*City:* ${data.city}\n` +
-          `*System Size:* ${data.systemSize}\n` +
+          `*Select kW:* ${data.systemSize}\n` +
           `*Monthly Bill:* ${data.monthlyBill || "Not specified"}\n` +
-          `*Message:* ${data.message || "No additional message"}`
+          `*Choose Type:* ${data.message || "No additional message"}`
         );
         window.open(`https://wa.me/919337784113?text=${whatsappMessage}`, "_blank");
       }
@@ -177,7 +182,7 @@ window.location.href = `mailto:bidyabkasolarenergy@gmail.com?subject=${subject}&
               <span className="text-sm font-semibold text-primary">Free Site Survey</span>
             </motion.div>
             <h2 className="section-title text-foreground mb-4">
-              Apply for <span className="gradient-text">Solar Subsidy</span>
+              <span className="gradient-text">More Inquiry</span>
             </h2>
             <p className="section-subtitle">
               Fill the form below and get a free site survey
@@ -293,19 +298,19 @@ window.location.href = `mailto:bidyabkasolarenergy@gmail.com?subject=${subject}&
                     name="systemSize"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-foreground font-semibold">System Size Required *</FormLabel>
+                        <FormLabel className="text-foreground font-semibold">Select kW *</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="h-12 rounded-xl border-border/50 focus:border-primary">
-                              <SelectValue placeholder="Select size" />
+                              <SelectValue placeholder="Select kW" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="rounded-xl">
-                            <SelectItem value="1kW">1 kW (₹30,000 Subsidy)</SelectItem>
-                            <SelectItem value="2kW">2 kW (₹60,000 Subsidy)</SelectItem>
-                            <SelectItem value="3kW">3 kW (₹78,000 Subsidy)</SelectItem>
-                            <SelectItem value="5kW">5 kW (₹78,000 Subsidy)</SelectItem>
-                            <SelectItem value="10kW+">10 kW+ (Commercial)</SelectItem>
+                            <SelectItem value="1kW">1 kW </SelectItem>
+                            <SelectItem value="2kW">2 kW </SelectItem>
+                            <SelectItem value="3kW">3 kW </SelectItem>
+                            <SelectItem value="5kW">5 kW </SelectItem>
+                            <SelectItem value="10kW+">10 kW+ </SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -334,23 +339,29 @@ window.location.href = `mailto:bidyabkasolarenergy@gmail.com?subject=${subject}&
                 />
 
                 {/* Message */}
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground font-semibold">Additional Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Any specific requirements or questions?" 
-                          className="rounded-xl border-border/50 focus:border-primary input-glow min-h-[100px]"
-                          {...field} 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+               <FormField
+  control={form.control}
+  name="solarType"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel> Choose Type *</FormLabel>
+      <Select onValueChange={field.onChange} value={field.value}>
+        <FormControl>
+          <SelectTrigger>
+            <SelectValue placeholder="Select solar system type" />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          <SelectItem value="on-grid">On-Grid</SelectItem>
+          <SelectItem value="hybrid">Hybrid</SelectItem>
+          <SelectItem value="off-grid">Off-Grid</SelectItem>
+          <SelectItem value="other">Other</SelectItem>
+        </SelectContent>
+      </Select>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
 
                 {/* Submission Options */}
                 <div className="p-5 rounded-2xl bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 space-y-4">

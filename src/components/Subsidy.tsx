@@ -6,27 +6,27 @@ import { Sun, IndianRupee, Leaf, FileCheck, Sparkles } from "lucide-react";
 const subsidyDetails = [
   {
     capacity: "1 kW",
-    subsidy: "₹30,000",
-    totalCost: "~₹60,000",
-    afterSubsidy: "~₹30,000",
+    central: "₹30,000",
+    state: "~₹25,000",
+    total: "~₹55,000",
   },
   {
     capacity: "2 kW",
-    subsidy: "₹60,000",
-    totalCost: "~₹1,20,000",
-    afterSubsidy: "~₹60,000",
+    central: "₹60,000",
+    state: "~₹50,000",
+    total: "~₹1,10,000",
   },
   {
     capacity: "3 kW",
-    subsidy: "₹78,000",
-    totalCost: "~₹1,80,000",
-    afterSubsidy: "~₹1,02,000",
+    central: "₹78,000",
+    state: "~₹60,000",
+    total: "~₹1,38,000",
   },
   {
-    capacity: "5 kW+",
-    subsidy: "₹78,000",
-    totalCost: "Custom Quote",
-    afterSubsidy: "Contact Us",
+    capacity: "3 kW+",
+    central: "₹78,000",
+    state: "~₹60,000",
+    total: "~₹1,38,000",
   },
 ];
 
@@ -115,9 +115,9 @@ export default function Subsidy() {
             </h3>
             <div className="grid grid-cols-4 gap-4 text-center mb-4 pb-4 border-b border-primary-foreground/20">
               <div className="text-sm font-bold text-accent tracking-wide">Capacity</div>
-              <div className="text-sm font-bold text-accent tracking-wide">Subsidy</div>
-              <div className="text-sm font-bold text-accent tracking-wide">Total Cost</div>
-              <div className="text-sm font-bold text-accent tracking-wide">You Pay</div>
+              <div className="text-sm font-bold text-accent tracking-wide">Capital</div>
+              <div className="text-sm font-bold text-accent tracking-wide">State</div>
+              <div className="text-sm font-bold text-accent tracking-wide">Total Subsidy</div>
             </div>
             {subsidyDetails.map((item, index) => (
               <motion.div
@@ -128,9 +128,9 @@ export default function Subsidy() {
                 className="grid grid-cols-4 gap-4 text-center py-4 border-b border-primary-foreground/10 last:border-0 hover:bg-primary-foreground/5 rounded-lg transition-colors"
               >
                 <div className="font-bold text-primary-foreground">{item.capacity}</div>
-                <div className="font-bold text-accent text-lg">{item.subsidy}</div>
-                <div className="text-primary-foreground/70">{item.totalCost}</div>
-                <div className="font-bold text-primary-foreground">{item.afterSubsidy}</div>
+                <div className="font-bold text-accent text-lg">{item.central}</div>
+                <div className="text-primary-foreground/70">{item.state}</div>
+                <div className="font-bold text-primary-foreground">{item.total}</div>
               </motion.div>
             ))}
           </div>

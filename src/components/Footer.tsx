@@ -99,13 +99,13 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+917008404029"
+                  href="tel:+919337784113"
                   className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
                   <div className="w-9 h-9 rounded-xl bg-primary-foreground/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                     <Phone className="w-4 h-4" />
                   </div>
-                  +91 7008404029
+                  +91 9337784113
                 </a>
               </li>
               <li>
@@ -115,10 +115,6 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-primary-foreground/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                    <MessageCircle className="w-4 h-4" />
-                  </div>
-                  +91 9556355198 (WhatsApp)
                 </a>
               </li>
               <li>

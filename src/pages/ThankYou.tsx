@@ -91,11 +91,11 @@ export default function ThankYou() {
         <div className="mt-8 pt-8 border-t border-primary-foreground/20">
           <p className="text-sm text-primary-foreground/70 mb-2">Need immediate assistance?</p>
           <a
-            href="tel:+917008404029"
+            href="tel:+919337784113"
             className="inline-flex items-center gap-2 text-accent font-semibold hover:underline"
           >
             <Phone className="w-4 h-4" />
-            +91 7008404029
+            +91 9337784113
           </a>
         </div>
       </motion.div>

@@ -85,7 +85,7 @@ export default function Hero() {
             className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-6 max-w-2xl leading-relaxed"
           >
             Get up to <span className="font-bold text-accent">₹138,000</span> government subsidy on residential or domestic solar installation. 
-            Save 90% on electricity bills with BSEAS – Odisha's trusted solar EPC company.
+            Save 90% on electricity bills with BSEAS – India's trusted solar EPC company. Working all over India.
           </motion.p>
 
           {/* Trust Badges */}
@@ -124,7 +124,7 @@ export default function Hero() {
               onClick={scrollToForm}
               className="group btn-hero-primary flex items-center justify-center gap-3 pulse-glow"
             >
-              <span>Apply for Solar Subsidy</span>
+              <span>Apply Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
